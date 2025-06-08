@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-22">
           
           <Link to="/" className="text-2xl font-bold text-blue-300 hover:text-blue-800">
-          <img to="/" src="/images/4.jpeg" alt="School 1" className="rounded-xl w-34 h-24 object-cover" />
+          <img to="/" src="/images/4.png" alt="School 1" className="rounded-xl w-34 h-24 object-cover" />
           </Link>
 
           <ul className="flex space-x-6 text-gray-800 font-medium">

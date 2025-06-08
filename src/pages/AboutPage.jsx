@@ -140,7 +140,7 @@ export default function AboutPage() {
               className="bg-white rounded-xl shadow-md p-6 text-center">
               <img
                 src={img}
-                alt={`${name} photo`}
+                alt={name}
                 className="mx-auto mb-4 w-32 h-32 object-cover rounded-full border-4 border-blue-500"
               />
               <h3 className="text-xl font-semibold text-blue-700">{name}</h3>
