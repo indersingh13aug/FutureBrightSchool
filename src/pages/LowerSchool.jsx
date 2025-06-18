@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 // Image Arrays for Each Section
 const literacyImages = ["/images/literacy1.jpg", "/images/literacy2.jpg"];
@@ -11,7 +12,6 @@ const outdoorImages = ["/images/outdoor1.jpg", "/images/outdoor2.jpg"];
 // Image Carousel Component
 function ImageCarousel({ images, onImageClick }) {
   const [index, setIndex] = useState(0);
-
   const prev = () => setIndex((index - 1 + images.length) % images.length);
   const next = () => setIndex((index + 1) % images.length);
 
@@ -42,7 +42,6 @@ function ImageCarousel({ images, onImageClick }) {
 // Zoom Popup Component
 function ImagePopup({ images, currentIndex, onClose }) {
   const [index, setIndex] = useState(currentIndex);
-
   const prev = () => setIndex((index - 1 + images.length) % images.length);
   const next = () => setIndex((index + 1) % images.length);
 
@@ -68,6 +67,7 @@ function ImagePopup({ images, currentIndex, onClose }) {
 
 // Main Page
 export default function LowerSchoolTK1() {
+  const { t } = useTranslation();
   const [popupOpen, setPopupOpen] = useState(false);
   const [popupIndex, setPopupIndex] = useState(0);
   const [popupImages, setPopupImages] = useState([]);
@@ -78,11 +78,15 @@ export default function LowerSchoolTK1() {
     setPopupOpen(true);
   };
 
-  const renderSection = (title, description, images) => (
+  const renderSection = (sectionKey, images) => (
     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
       <div className="md:w-2/3">
-        <h2 className="text-2xl font-semibold text-blue-600 mb-2">{title}</h2>
-        <p className="text-gray-700 leading-relaxed">{description}</p>
+        <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+          {t(`lowerSchool.sections.${sectionKey}.title`)}
+        </h2>
+        <p className="text-gray-700 leading-relaxed">
+          {t(`lowerSchool.sections.${sectionKey}.description`)}
+        </p>
       </div>
       <ImageCarousel images={images} onImageClick={(i) => handleImageClick(i, images)} />
     </div>
@@ -90,47 +94,27 @@ export default function LowerSchoolTK1() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-      <h1 className="text-4xl font-bold text-blue-700 mb-6">Lower School (TK–1)</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-6">
+        {t("lowerSchool.title")}
+      </h1>
       <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-        Our Transitional Kindergarten (TK) to Grade 1 program lays the foundation for a child’s lifelong learning
-        journey. With a nurturing environment, experienced educators, and engaging activities, we help our young
-        learners build essential academic and social-emotional skills.
+        {t("lowerSchool.intro")}
       </p>
 
       <div className="space-y-12">
-        {renderSection(
-          "Foundational Literacy",
-          "Through phonics, storytelling, and guided reading sessions, children are introduced to the joy of language. We focus on vocabulary development, letter recognition, and early writing to build communication skills.",
-          literacyImages
-        )}
-        {renderSection(
-          "Early Numeracy",
-          "Children explore numbers, patterns, and problem-solving through hands-on activities and play-based learning. Math becomes exciting with the use of manipulatives, visual aids, and interactive games.",
-          numeracyImages
-        )}
-        {renderSection(
-          "Social & Emotional Development",
-          "We help children understand their emotions, build relationships, and develop a sense of self-confidence. Classroom routines and group activities foster empathy, responsibility, and cooperation.",
-          socialEmotionalImages
-        )}
-        {renderSection(
-          "Creative Expression",
-          "Music, art, and movement are integral to our TK–1 curriculum. Children express themselves creatively through drawing, dance, storytelling, and imaginative play.",
-          creativeImages
-        )}
-        {renderSection(
-          "Outdoor & Exploratory Learning",
-          "Outdoor classrooms and nature walks are used to develop motor skills, awareness of the environment, and observation abilities. We encourage curiosity through science and nature exploration.",
-          outdoorImages
-        )}
+        {renderSection("literacy", literacyImages)}
+        {renderSection("numeracy", numeracyImages)}
+        {renderSection("socialEmotional", socialEmotionalImages)}
+        {renderSection("creative", creativeImages)}
+        {renderSection("outdoor", outdoorImages)}
       </div>
 
       <div className="mt-12 bg-blue-50 p-6 rounded-lg">
-        <h3 className="text-xl font-semibold text-blue-700 mb-2">Family & Community Partnership</h3>
+        <h3 className="text-xl font-semibold text-blue-700 mb-2">
+          {t("lowerSchool.sections.family.title")}
+        </h3>
         <p className="text-gray-700 leading-relaxed">
-          We believe learning is most effective when it is a shared experience. Our program includes regular
-          parent-teacher communication, student showcases, and collaborative learning opportunities to involve families
-          in the early education journey.
+          {t("lowerSchool.sections.family.description")}
         </p>
       </div>
 

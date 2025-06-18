@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import AdmissionForm from "../components/AdmissionForm";
+import { useTranslation } from "react-i18next";
 
 export default function AdmissionsPage() {
+  const { t } = useTranslation();
+
   return (
     <section className="min-h-screen bg-gray-50 py-20 px-6">
       <motion.div
@@ -11,10 +14,10 @@ export default function AdmissionsPage() {
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-4xl font-extrabold text-blue-700 mb-4">
-          Admissions Open 2025-26
+          {t("admissions.title")}
         </h1>
         <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-          We welcome new students to join our vibrant community. Explore our admission process, eligibility criteria, and start your journey towards excellence.
+          {t("admissions.description")}
         </p>
       </motion.div>
 
@@ -28,31 +31,19 @@ export default function AdmissionsPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.6 }}
       >
-        {[
-          {
-            title: "Easy Application Process",
-            description:
-              "Apply online quickly and securely with our streamlined admission form.",
-          },
-          {
-            title: "Scholarships Available",
-            description:
-              "Merit-based and need-based scholarships to support your education.",
-          },
-          {
-            title: "Experienced Faculty",
-            description:
-              "Learn from highly qualified and passionate teachers committed to your success.",
-          },
-        ].map(({ title, description }, i) => (
-          <div
-            key={i}
-            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition cursor-default"
-          >
-            <h3 className="text-xl font-semibold text-blue-700 mb-3">{title}</h3>
-            <p className="text-gray-700">{description}</p>
-          </div>
-        ))}
+        {t("admissions.highlights", { returnObjects: true }).map(
+          ({ title, description }, i) => (
+            <div
+              key={i}
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition cursor-default"
+            >
+              <h3 className="text-xl font-semibold text-blue-700 mb-3">
+                {title}
+              </h3>
+              <p className="text-gray-700">{description}</p>
+            </div>
+          )
+        )}
       </motion.div>
     </section>
   );

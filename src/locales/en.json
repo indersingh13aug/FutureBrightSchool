@@ -1,0 +1,353 @@
+{
+  "welcome": "Welcome to our site",
+  "change_language": "Change Language",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "programs": "Programs",
+    "admissions": "Admissions",
+    "contact": "Contact",
+    "studentlife": "Student Life",
+    "academics" : "Academics",
+    "academic_programs":"Academic Programs",
+    "lower_school": "Lower School",
+    "lower_school_25":"Lower School (2-5)",
+    "middle_school": "Middle School"
+  },
+  "footer": {
+    "copyright": "© 2025"
+  },
+  "language": {
+    "select": "Select Language"
+  },
+  "about": {
+  "title": "About FutureBright School",
+  "description": "At FutureBright School, we nurture young minds to become confident, compassionate, and creative global citizens. Our mission is to provide holistic education through innovative teaching, community engagement, and a safe, inclusive environment.",
+  "core_values_title": "Our Core Values",
+  "core_values": [
+    "Integrity and Respect",
+    "Academic Excellence",
+    "Inclusivity and Diversity",
+    "Creativity and Innovation",
+    "Community Engagement"
+  ],
+  "team_title": "Meet Our Leadership Team",
+  "team": [
+    {
+      "name": "Dr. Anjali Singh",
+      "role": "Principal",
+      "img": "/images/principal.jpg",
+      "bio": "With over 20 years of experience, Dr. Singh leads the school with a vision for innovation and inclusivity."
+    },
+    {
+      "name": "Mr. Rajesh Kumar",
+      "role": "Vice Principal",
+      "img": "/images/viceprincipal.jpg",
+      "bio": "Committed to fostering student success and supporting faculty development."
+    },
+    {
+      "name": "Mrs. Meera Joshi",
+      "role": "Head of Admissions",
+      "img": "/images/admissions_head.jpg",
+      "bio": "Ensures a smooth and welcoming admission process for all prospective families."
+    }
+  ]
+},
+"admissions": {
+  "title": "Admissions Open 2025-26",
+  "description": "We welcome new students to join our vibrant community. Explore our admission process, eligibility criteria, and start your journey towards excellence.",
+  "highlights": [
+    {
+      "title": "Easy Application Process",
+      "description": "Apply online quickly and securely with our streamlined admission form."
+    },
+    {
+      "title": "Scholarships Available",
+      "description": "Merit-based and need-based scholarships to support your education."
+    },
+    {
+      "title": "Experienced Faculty",
+      "description": "Learn from highly qualified and passionate teachers committed to your success."
+    }
+  ]
+},
+"academics": {
+  "title": "Academic Programs",
+  "intro": "At FutureBright, our academic programs are thoughtfully designed to nurture critical thinking, creativity, and a love of learning from the earliest years through to graduation. We believe in a balanced, holistic approach to education that prepares students not just for exams, but for life.",
+  "sections": {
+    "toddler": {
+      "title": "Lower School (TK-1)",
+      "description": "Our early education program focuses on foundational skills through interactive play, storytelling, and hands-on activities. Students are encouraged to explore, ask questions, and develop confidence in a nurturing environment."
+    },
+    "lower25": {
+      "title": "Lower School (Grades 2-5)",
+      "description": "Building upon early learning, this stage focuses on literacy, numeracy, and developing inquiry-based learning habits. Emphasis is placed on teamwork, respect, and establishing core academic values."
+    },
+    "middle": {
+      "title": "Middle School (Grades 6-8)",
+      "description": "The middle school years focus on critical thinking, digital literacy, and preparing students for high school rigor. We introduce project-based learning, leadership activities, and exploratory subjects such as coding, art, and public speaking."
+    }
+  },
+  "support": {
+    "title": "Support Services",
+    "description": "Our academic programs are complemented by support services such as student wellbeing initiatives, career counseling, co-curricular activities, and academic remediation where needed."
+  }
+},
+"contact": {
+  "title": "Get in Touch",
+  "thankYou": "Thanks! We'll get back to you soon.",
+  "name": "Your Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Send Message",
+  "infoTitle": "Contact Information",
+  "address": "FutureBright School, Near Green Valley Park, Amethi, Uttar Pradesh, 227405",
+  "phone": "+91 98765 43210",
+  "emailText": "info@futurebrightschool.edu.in"
+},
+
+  "explore_programs": "Explore Our Programs",
+  "close": "Close",
+  "mission_title": "Our Mission",
+  "mission_text": "To cultivate an environment where every student achieves their full potential academically, socially, and emotionally.",
+  "values_title": "Our Values",
+  "value_list": [
+    "Respect and Integrity",
+    "Excellence in Education",
+    "Inclusiveness and Diversity",
+    "Creativity and Innovation",
+    "Community Engagement"
+  ],
+  "join_title": "Join Us",
+  "join_text": "Become part of a vibrant community that empowers students to thrive and make a positive impact on the world.",
+  "programs": {
+    "science": {
+      "title": "Science Stream",
+      "description": "Explore Physics, Chemistry, Biology with hands-on experiments.",
+      "details": "Our Science program nurtures curiosity and critical thinking. Students engage in labs, projects, and research opportunities to prepare for competitive exams and STEM careers."
+    },
+    "arts": {
+      "title": "Arts & Humanities",
+      "description": "Dive into literature, history, and social sciences.",
+      "details": "The Arts program encourages creativity and cultural awareness, helping students develop strong communication and analytical skills."
+    },
+    "commerce": {
+      "title": "Commerce & Business",
+      "description": "Learn economics, finance, accounting and business management.",
+      "details": "Prepare for careers in business, finance, and entrepreneurship with practical knowledge and internship opportunities."
+    },
+    "sports": {
+      "title": "Sports & Physical Education",
+      "description": "Focus on fitness, teamwork, and athletic development.",
+      "details": "Our sports program fosters discipline and healthy living with coaching in multiple sports and fitness regimes."
+    }
+  },
+
+  
+  "lowerSchool": {
+    "title": "Lower School (TK–1)",
+    "intro": "Our Transitional Kindergarten (TK) to Grade 1 program lays the foundation for a child’s lifelong learning journey. With a nurturing environment, experienced educators, and engaging activities, we help our young learners build essential academic and social-emotional skills.",
+    "sections": {
+      "literacy": {
+        "title": "Foundational Literacy",
+        "description": "Through phonics, storytelling, and guided reading sessions, children are introduced to the joy of language. We focus on vocabulary development, letter recognition, and early writing to build communication skills."
+      },
+      "numeracy": {
+        "title": "Early Numeracy",
+        "description": "Children explore numbers, patterns, and problem-solving through hands-on activities and play-based learning. Math becomes exciting with the use of manipulatives, visual aids, and interactive games."
+      },
+      "socialEmotional": {
+        "title": "Social & Emotional Development",
+        "description": "We help children understand their emotions, build relationships, and develop a sense of self-confidence. Classroom routines and group activities foster empathy, responsibility, and cooperation."
+      },
+      "creative": {
+        "title": "Creative Expression",
+        "description": "Music, art, and movement are integral to our TK–1 curriculum. Children express themselves creatively through drawing, dance, storytelling, and imaginative play."
+      },
+      "outdoor": {
+        "title": "Outdoor & Exploratory Learning",
+        "description": "Outdoor classrooms and nature walks are used to develop motor skills, awareness of the environment, and observation abilities. We encourage curiosity through science and nature exploration."
+      },
+      "family": {
+        "title": "Family & Community Partnership",
+        "description": "We believe learning is most effective when it is a shared experience. Our program includes regular parent-teacher communication, student showcases, and collaborative learning opportunities to involve families in the early education journey."
+      }
+    }
+  },
+  
+  "lowerSchool25": {
+    "title": "Lower School (Grades 2–5)",
+    "intro": "The Lower School (Grades 2–5) continues to nurture a child’s natural curiosity, creativity, and love of learning. Our curriculum is designed to provide a strong academic foundation while promoting independence, collaboration, and personal growth.",
+    "sections": {
+      "languageArts": {
+        "title": "Language Arts",
+        "description": "Students deepen their reading comprehension, vocabulary, and grammar skills through rich literature, guided reading groups, and writing workshops. Emphasis is placed on writing clearly and confidently for various purposes and audiences."
+      },
+      "math": {
+        "title": "Mathematics",
+        "description": "A hands-on approach to math helps students understand concepts like multiplication, division, fractions, geometry, and word problems. We foster logical thinking, number sense, and problem-solving skills."
+      },
+      "science": {
+        "title": "Science & Discovery",
+        "description": "Science lessons are inquiry-based, encouraging observation, experimentation, and critical thinking. Topics include earth science, biology, weather, ecosystems, and physical science, often tied to real-world applications."
+      },
+      "socialStudies": {
+        "title": "Social Studies",
+        "description": "Students explore communities, cultures, history, geography, and citizenship. They engage in project-based learning and develop a sense of responsibility as global citizens."
+      },
+      "arts": {
+        "title": "Arts & Enrichment",
+        "description": "Visual arts, music, and performing arts are integrated into the curriculum, allowing children to express themselves creatively. Students also participate in library, computer lab, and life skills sessions."
+      },
+      "character": {
+        "title": "Character & Life Skills",
+        "description": "We emphasize respect, empathy, perseverance, and responsibility through daily interactions, classroom activities, and school-wide programs. Students learn to manage conflict, work in teams, and become confident leaders."
+      }
+    }
+  },
+  
+  "middleSchool": {
+    "title": "Middle School (Grades 6–8)",
+    "intro": "Our Middle School program is designed to meet the academic, emotional, and social needs of students as they transition from childhood to adolescence. We encourage curiosity, independence, and leadership through a balanced, challenging, and supportive curriculum.",
+    "sections": {
+      "ela": {
+        "title": "English Language Arts",
+        "description": "Students develop analytical reading and structured writing skills through novels, essays, poetry, and research projects. Vocabulary and grammar are integrated into daily learning, with an emphasis on critical thinking and communication."
+      },
+      "math": {
+        "title": "Mathematics",
+        "description": "Middle School math includes pre-algebra, algebra, and geometry concepts. Students engage in problem-solving, mathematical reasoning, and real-world application of math skills using interactive methods and technology tools."
+      },
+      "science": {
+        "title": "Science",
+        "description": "Our hands-on science program covers life science, earth science, chemistry, and physics. Students conduct experiments, analyze data, and participate in science fairs and field-based investigations."
+      },
+      "socialStudies": {
+        "title": "Social Studies",
+        "description": "Students explore world history, geography, civics, and cultures. Lessons focus on cause-effect relationships, current events, historical significance, and developing a global perspective."
+      },
+      "languages": {
+        "title": "World Languages",
+        "description": "Students begin or continue study in languages such as Hindi, Sanskrit, or French. Emphasis is on speaking, listening, reading, and writing in the target language with cultural awareness."
+      },
+      "technology": {
+        "title": "Technology & Media Literacy",
+        "description": "Middle schoolers learn to use technology responsibly for research, presentations, digital creativity, and online safety. Coding and robotics are introduced as part of the STEM curriculum."
+      },
+      "leadership": {
+        "title": "Leadership, Wellness & Life Skills",
+        "description": "We nurture emotional intelligence, teamwork, and ethical decision-making. Students take on leadership roles through student council, clubs, and community projects. Life skills and physical education are embedded to build resilience, health, and responsibility."
+      }
+    }
+  },
+  
+  "programsp": {
+    "title": "Our Programs",
+    "description": "We offer a wide range of academic and extracurricular programs designed to nurture talents and build skills for the future.",
+    "science": {
+      "title": "Science Stream",
+      "description": "Explore Physics, Chemistry, Biology with hands-on experiments.",
+      "details": "Our Science program nurtures curiosity and critical thinking. Students engage in labs, projects, and research opportunities to prepare for competitive exams and STEM careers."
+    },
+    "arts": {
+      "title": "Arts & Humanities",
+      "description": "Dive into literature, history, and social sciences.",
+      "details": "The Arts program encourages creativity and cultural awareness, helping students develop strong communication and analytical skills."
+    },
+    "commerce": {
+      "title": "Commerce & Business",
+      "description": "Learn economics, finance, accounting and business management.",
+      "details": "Prepare for careers in business, finance, and entrepreneurship with practical knowledge and internship opportunities."
+    },
+    "sports": {
+      "title": "Sports & Physical Education",
+      "description": "Focus on fitness, teamwork, and athletic development.",
+      "details": "Our sports program fosters discipline and healthy living with coaching in multiple sports and fitness regimes."
+    },
+    "close": "Close"
+  },
+  
+  "studentLife": {
+    "heading": "Student Life at FutureBright",
+    "intro": "At FutureBright, student life is vibrant, diverse, and rich in experiences. Our campus culture nurtures a sense of belonging, encourages leadership, and fosters lifelong friendships. From academics to arts and athletics, every student has the opportunity to thrive.",
+    "academics": {
+      "title": "Academics Beyond the Classroom",
+      "description": "Our students engage in real-world problem solving through projects, field trips, and science fairs. Enrichment programs like debate clubs, coding workshops, and math olympiads help extend learning beyond textbooks."
+    },
+    "arts": {
+      "title": "Arts and Culture",
+      "description": "The creative spirit is alive at FutureBright! Students participate in music, dance, drama, and visual arts. Annual cultural fests, talent shows, and art exhibitions celebrate our diverse community and artistic talents."
+    },
+    "sports": {
+      "title": "Sports and Wellness",
+      "description": "From team sports like basketball and football to individual pursuits like yoga and athletics, we emphasize physical fitness and well-being. Our campus includes playgrounds, courts, and wellness centers to support active lifestyles."
+    },
+    "leadership": {
+      "title": "Leadership and Student Clubs",
+      "description": "FutureBright offers student council, eco clubs, coding clubs, and more. These platforms empower students to lead initiatives, organize events, and make a difference in their school and local community."
+    },
+    "community": {
+      "title": "Community Service and Values",
+      "description": "We instill the values of empathy, service, and civic responsibility through community projects, donation drives, and awareness campaigns. Students develop a strong sense of purpose and connection to society."
+    },
+    "dayInLife": {
+      "title": "A Day in the Life",
+      "description": "A typical day at FutureBright is full of discovery, creativity, and joy. With a supportive environment, dedicated mentors, and plenty of opportunity, student life here prepares our learners not just for exams, but for life."
+    }
+  },
+  "programCard": {
+  "learnMore": "Learn more"
+},
+"admission": {
+  "heading": "Admission Application Form",
+  "success": "Thank you! Your application has been submitted.",
+  "fullName": "Full Name",
+  "dob": "Date of Birth",
+  "classApply": "Class Applying For",
+  "email": "Email",
+  "phone": "Phone",
+  "address": "Address",
+  "message": "Message",
+  "messagePlaceholder": "Tell us anything we should know...",
+  "submitButton": "Submit Application"
+},"footer": {
+  "schoolName": "Future Bright School",
+  "mission": "We empower students to achieve academic excellence, develop character, and prepare for future success through innovation, compassion, and creativity.",
+  "quickLinks": "Quick Links",
+  "contactUs": "Contact Us",
+  "followUs": "Follow Us",
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "admissions": "Admissions",
+    "contact": "Contact"
+  },
+  "address": "123 Knowledge Lane, Amethi, UP",
+  "rightsReserved": "All rights reserved."
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

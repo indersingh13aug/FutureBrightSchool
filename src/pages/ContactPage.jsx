@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -31,13 +34,17 @@ export default function ContactPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-blue-700 mb-6">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-blue-700 mb-6">
+            {t("contact.title")}
+          </h2>
           {submitted ? (
-            <p className="text-green-600 font-medium">Thanks! We'll get back to you soon.</p>
+            <p className="text-green-600 font-medium">{t("contact.thankYou")}</p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-gray-700 font-medium mb-1">Your Name</label>
+                <label className="block text-gray-700 font-medium mb-1">
+                  {t("contact.name")}
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -48,7 +55,9 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">Email</label>
+                <label className="block text-gray-700 font-medium mb-1">
+                  {t("contact.email")}
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -59,7 +68,9 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-1">Message</label>
+                <label className="block text-gray-700 font-medium mb-1">
+                  {t("contact.message")}
+                </label>
                 <textarea
                   name="message"
                   rows="4"
@@ -73,7 +84,7 @@ export default function ContactPage() {
                 type="submit"
                 className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition font-semibold"
               >
-                Send Message
+                {t("contact.submit")}
               </button>
             </form>
           )}
@@ -87,12 +98,14 @@ export default function ContactPage() {
           transition={{ duration: 0.5 }}
         >
           <div className="bg-white p-6 rounded-2xl shadow-md">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">
+              {t("contact.infoTitle")}
+            </h3>
             <p className="text-gray-700 mb-2">
-              📍 FutureBright School, Near Green Valley Park, Amethi, Uttar Pradesh, 227405
+              📍 {t("contact.address")}
             </p>
-            <p className="text-gray-700 mb-2">📞 +91 98765 43210</p>
-            <p className="text-gray-700">📧 info@futurebrightschool.edu.in</p>
+            <p className="text-gray-700 mb-2">📞 {t("contact.phone")}</p>
+            <p className="text-gray-700">📧 {t("contact.emailText")}</p>
           </div>
 
           <div className="rounded-xl overflow-hidden shadow-md">

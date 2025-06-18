@@ -1,84 +1,91 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function MiddleSchool() {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       {/* Title */}
-      <h1 className="text-4xl font-bold text-blue-700 mb-6">Middle School (Grades 6–8)</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-6">
+        {t("middleSchool.title")}
+      </h1>
 
       {/* Introduction */}
       <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-        Our Middle School program is designed to meet the academic, emotional, and social needs of students
-        as they transition from childhood to adolescence. We encourage curiosity, independence, and leadership
-        through a balanced, challenging, and supportive curriculum.
+        {t("middleSchool.intro")}
       </p>
 
       {/* Academic Subjects */}
       <div className="space-y-10">
         {/* English Language Arts */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-2">English Language Arts</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+            {t("middleSchool.sections.ela.title")}
+          </h2>
           <p className="text-gray-700 leading-relaxed">
-            Students develop analytical reading and structured writing skills through novels, essays, poetry,
-            and research projects. Vocabulary and grammar are integrated into daily learning, with an emphasis
-            on critical thinking and communication.
+            {t("middleSchool.sections.ela.description")}
           </p>
         </div>
 
         {/* Mathematics */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-2">Mathematics</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+            {t("middleSchool.sections.math.title")}
+          </h2>
           <p className="text-gray-700 leading-relaxed">
-            Middle School math includes pre-algebra, algebra, and geometry concepts. Students engage in
-            problem-solving, mathematical reasoning, and real-world application of math skills using
-            interactive methods and technology tools.
+            {t("middleSchool.sections.math.description")}
           </p>
         </div>
 
         {/* Science */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-2">Science</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+            {t("middleSchool.sections.science.title")}
+          </h2>
           <p className="text-gray-700 leading-relaxed">
-            Our hands-on science program covers life science, earth science, chemistry, and physics. Students
-            conduct experiments, analyze data, and participate in science fairs and field-based investigations.
+            {t("middleSchool.sections.science.description")}
           </p>
         </div>
 
         {/* Social Studies */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-2">Social Studies</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+            {t("middleSchool.sections.socialStudies.title")}
+          </h2>
           <p className="text-gray-700 leading-relaxed">
-            Students explore world history, geography, civics, and cultures. Lessons focus on cause-effect
-            relationships, current events, historical significance, and developing a global perspective.
+            {t("middleSchool.sections.socialStudies.description")}
           </p>
         </div>
 
         {/* World Languages */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-2">World Languages</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+            {t("middleSchool.sections.languages.title")}
+          </h2>
           <p className="text-gray-700 leading-relaxed">
-            Students begin or continue study in languages such as Hindi, Sanskrit, or French. Emphasis is on
-            speaking, listening, reading, and writing in the target language with cultural awareness.
+            {t("middleSchool.sections.languages.description")}
           </p>
         </div>
 
-        {/* Technology and Media Literacy */}
+        {/* Technology & Media Literacy */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-2">Technology & Media Literacy</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+            {t("middleSchool.sections.technology.title")}
+          </h2>
           <p className="text-gray-700 leading-relaxed">
-            Middle schoolers learn to use technology responsibly for research, presentations, digital creativity,
-            and online safety. Coding and robotics are introduced as part of the STEM curriculum.
+            {t("middleSchool.sections.technology.description")}
           </p>
         </div>
       </div>
 
-      {/* Enrichment and Life Skills */}
+      {/* Leadership, Wellness & Life Skills */}
       <div className="mt-12 bg-blue-50 p-6 rounded-lg">
-        <h3 className="text-xl font-semibold text-blue-700 mb-2">Leadership, Wellness & Life Skills</h3>
+        <h3 className="text-xl font-semibold text-blue-700 mb-2">
+          {t("middleSchool.sections.leadership.title")}
+        </h3>
         <p className="text-gray-700 leading-relaxed">
-          We nurture emotional intelligence, teamwork, and ethical decision-making. Students take on leadership roles
-          through student council, clubs, and community projects. Life skills and physical education are embedded to
-          build resilience, health, and responsibility.
+          {t("middleSchool.sections.leadership.description")}
         </p>
       </div>
     </div>

@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import './i18n'; // important
+// import { useTranslation } from 'react-i18next';
 import HomePage from "./pages/HomePage";
 import ProgramsPage from "./pages/ProgramsPage";
 import AboutPage from "./pages/AboutPage";

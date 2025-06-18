@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function ProgramCard({ image, title, description, link }) {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl"
@@ -22,7 +25,7 @@ export default function ProgramCard({ image, title, description, link }) {
             to={link}
             className="text-blue-600 font-medium hover:underline text-sm"
           >
-            Learn more →
+            {t("programCard.learnMore")} →
           </Link>
         )}
       </div>

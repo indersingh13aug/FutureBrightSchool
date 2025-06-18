@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function AdmissionForm() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     fullName: "",
     dob: "",
@@ -36,7 +39,7 @@ export default function AdmissionForm() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Admission Application Form
+          {t("admission.heading")}
         </motion.h2>
 
         {submitted ? (
@@ -45,13 +48,15 @@ export default function AdmissionForm() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            Thank you! Your application has been submitted.
+            {t("admission.success")}
           </motion.p>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block mb-1 font-medium text-gray-700">Full Name</label>
+                <label className="block mb-1 font-medium text-gray-700">
+                  {t("admission.fullName")}
+                </label>
                 <input
                   type="text"
                   name="fullName"
@@ -62,7 +67,9 @@ export default function AdmissionForm() {
                 />
               </div>
               <div>
-                <label className="block mb-1 font-medium text-gray-700">Date of Birth</label>
+                <label className="block mb-1 font-medium text-gray-700">
+                  {t("admission.dob")}
+                </label>
                 <input
                   type="date"
                   name="dob"
@@ -73,7 +80,9 @@ export default function AdmissionForm() {
                 />
               </div>
               <div>
-                <label className="block mb-1 font-medium text-gray-700">Class Applying For</label>
+                <label className="block mb-1 font-medium text-gray-700">
+                  {t("admission.classApply")}
+                </label>
                 <input
                   type="text"
                   name="classApply"
@@ -84,7 +93,9 @@ export default function AdmissionForm() {
                 />
               </div>
               <div>
-                <label className="block mb-1 font-medium text-gray-700">Email</label>
+                <label className="block mb-1 font-medium text-gray-700">
+                  {t("admission.email")}
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -95,7 +106,9 @@ export default function AdmissionForm() {
                 />
               </div>
               <div>
-                <label className="block mb-1 font-medium text-gray-700">Phone</label>
+                <label className="block mb-1 font-medium text-gray-700">
+                  {t("admission.phone")}
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -107,7 +120,9 @@ export default function AdmissionForm() {
                 />
               </div>
               <div>
-                <label className="block mb-1 font-medium text-gray-700">Address</label>
+                <label className="block mb-1 font-medium text-gray-700">
+                  {t("admission.address")}
+                </label>
                 <input
                   type="text"
                   name="address"
@@ -120,12 +135,14 @@ export default function AdmissionForm() {
             </div>
 
             <div>
-              <label className="block mb-1 font-medium text-gray-700">Message</label>
+              <label className="block mb-1 font-medium text-gray-700">
+                {t("admission.message")}
+              </label>
               <textarea
                 name="message"
                 rows="4"
                 className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Tell us anything we should know..."
+                placeholder={t("admission.messagePlaceholder")}
                 value={formData.message}
                 onChange={handleChange}
               />
@@ -136,7 +153,7 @@ export default function AdmissionForm() {
                 type="submit"
                 className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md hover:bg-blue-700 transition"
               >
-                Submit Application
+                {t("admission.submitButton")}
               </button>
             </div>
           </form>

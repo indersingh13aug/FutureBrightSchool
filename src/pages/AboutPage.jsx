@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 
 export default function AboutPage() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const { t } = useTranslation();
+
   return (
     <section className="min-h-screen bg-gray-50 py-16 px-6">
       {/* Hero Intro */}
@@ -13,9 +15,11 @@ export default function AboutPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="text-4xl font-extrabold text-blue-700 mb-4">About FutureBright School</h1>
+        <h1 className="text-4xl font-extrabold text-blue-700 mb-4">
+          {t("about.title")}
+        </h1>
         <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-          At FutureBright School, we nurture young minds to become confident, compassionate, and creative global citizens. Our mission is to provide holistic education through innovative teaching, community engagement, and a safe, inclusive environment.
+          {t("about.description")}
         </p>
       </motion.div>
 
@@ -31,12 +35,7 @@ export default function AboutPage() {
           }
         }}
       >
-        {[
-          "/images/school1.jpg",
-          "/images/school2.jpg",
-          "/images/school3.jpg",
-          "/images/school4.jpg",
-        ].map((src, idx) => (
+        {["/images/school1.jpg", "/images/school2.jpg", "/images/school3.jpg", "/images/school4.jpg"].map((src, idx) => (
           <motion.img
             key={idx}
             src={src}
@@ -58,13 +57,13 @@ export default function AboutPage() {
         transition={{ duration: 0.7, delay: 0.5 }}
       >
         <div>
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Our Core Values</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">
+            {t("about.core_values_title")}
+          </h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Integrity and Respect</li>
-            <li>Academic Excellence</li>
-            <li>Inclusivity and Diversity</li>
-            <li>Creativity and Innovation</li>
-            <li>Community Engagement</li>
+            {t("about.core_values", { returnObjects: true }).map((value, i) => (
+              <li key={i}>{value}</li>
+            ))}
           </ul>
         </div>
 
@@ -83,11 +82,11 @@ export default function AboutPage() {
       {isPopupOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-          onClick={() => setIsPopupOpen(false)} // Close on background click
+          onClick={() => setIsPopupOpen(false)}
         >
           <div
             className="bg-white rounded-lg shadow-lg p-4 relative max-w-3xl w-full"
-            onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setIsPopupOpen(false)}
@@ -105,7 +104,6 @@ export default function AboutPage() {
         </div>
       )}
 
-
       {/* Team Section */}
       <motion.div
         className="max-w-5xl mx-auto mt-20"
@@ -113,39 +111,23 @@ export default function AboutPage() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center">Meet Our Leadership Team</h2>
+        <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center">
+          {t("about.team_title")}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
-          {[
-            {
-              name: "Dr. Anjali Singh",
-              role: "Principal",
-              img: "/images/principal.jpg",
-              bio: "With over 20 years of experience, Dr. Singh leads the school with a vision for innovation and inclusivity."
-            },
-            {
-              name: "Mr. Rajesh Kumar",
-              role: "Vice Principal",
-              img: "/images/viceprincipal.jpg",
-              bio: "Committed to fostering student success and supporting faculty development."
-            },
-            {
-              name: "Mrs. Meera Joshi",
-              role: "Head of Admissions",
-              img: "/images/admissions_head.jpg",
-              bio: "Ensures a smooth and welcoming admission process for all prospective families."
-            }
-          ].map(({ name, role, img, bio }, idx) => (
+          {t("about.team", { returnObjects: true }).map((member, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 text-center">
+              className="bg-white rounded-xl shadow-md p-6 text-center"
+            >
               <img
-                src={img}
-                alt={name}
+                src={member.img}
+                alt={member.name}
                 className="mx-auto mb-4 w-32 h-32 object-cover rounded-full border-4 border-blue-500"
               />
-              <h3 className="text-xl font-semibold text-blue-700">{name}</h3>
-              <p className="text-sm text-gray-500 mb-3">{role}</p>
-              <p className="text-gray-700 text-sm">{bio}</p>
+              <h3 className="text-xl font-semibold text-blue-700">{member.name}</h3>
+              <p className="text-sm text-gray-500 mb-3">{member.role}</p>
+              <p className="text-gray-700 text-sm">{member.bio}</p>
             </div>
           ))}
         </div>

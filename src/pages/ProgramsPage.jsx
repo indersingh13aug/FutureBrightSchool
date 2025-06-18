@@ -1,48 +1,50 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ProgramCard from "../components/ProgramCard"; 
-import Modal from "../components/Modal"; 
-
-const programsData = [
-  {
-    id: 1,
-    title: "Science Stream",
-    description: "Explore Physics, Chemistry, Biology with hands-on experiments.",
-    image: "/images/program-science.jpg",
-    details:
-      "Our Science program nurtures curiosity and critical thinking. Students engage in labs, projects, and research opportunities to prepare for competitive exams and STEM careers.",
-  },
-  {
-    id: 2,
-    title: "Arts & Humanities",
-    description: "Dive into literature, history, and social sciences.",
-    image: "/images/program-arts.jpg",
-    details:
-      "The Arts program encourages creativity and cultural awareness, helping students develop strong communication and analytical skills.",
-  },
-  {
-    id: 3,
-    title: "Commerce & Business",
-    description: "Learn economics, finance, accounting and business management.",
-    image: "/images/program-commerce.jpg",
-    details:
-      "Prepare for careers in business, finance, and entrepreneurship with practical knowledge and internship opportunities.",
-  },
-  {
-    id: 4,
-    title: "Sports & Physical Education",
-    description: "Focus on fitness, teamwork, and athletic development.",
-    image: "/images/program-sports.jpg",
-    details:
-      "Our sports program fosters discipline and healthy living with coaching in multiple sports and fitness regimes.",
-  },
-];
+import { useTranslation } from "react-i18next";
+import ProgramCard from "../components/ProgramCard";
+import Modal from "../components/Modal";
 
 export default function ProgramsPage() {
+  const { t } = useTranslation();
   const [selectedProgram, setSelectedProgram] = useState(null);
 
   const openModal = (program) => setSelectedProgram(program);
   const closeModal = () => setSelectedProgram(null);
+
+  const programsData = [
+    {
+      id: 1,
+      key: "science",
+      title: t("programsp.science.title"),
+      description: t("programsp.science.description"),
+      image: "/images/program-science.jpg",
+      details: t("programsp.science.details"),
+    },
+    {
+      id: 2,
+      key: "arts",
+      title: t("programsp.arts.title"),
+      description: t("programsp.arts.description"),
+      image: "/images/program-arts.jpg",
+      details: t("programsp.arts.details"),
+    },
+    {
+      id: 3,
+      key: "commerce",
+      title: t("programsp.commerce.title"),
+      description: t("programsp.commerce.description"),
+      image: "/images/program-commerce.jpg",
+      details: t("programsp.commerce.details"),
+    },
+    {
+      id: 4,
+      key: "sports",
+      title: t("programsp.sports.title"),
+      description: t("programsp.sports.description"),
+      image: "/images/program-sports.jpg",
+      details: t("programsp.sports.details"),
+    },
+  ];
 
   return (
     <section className="min-h-screen bg-gray-50 py-20 px-6">
@@ -53,10 +55,10 @@ export default function ProgramsPage() {
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-4xl font-extrabold text-blue-700 mb-4">
-          Our Programs
+          {t("programsp.title")}
         </h1>
         <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-          We offer a wide range of academic and extracurricular programs designed to nurture talents and build skills for the future.
+          {t("programsp.description")}
         </p>
       </motion.div>
 
@@ -100,7 +102,7 @@ export default function ProgramsPage() {
               onClick={closeModal}
               className="mt-8 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
             >
-              Close
+              {t("programsp.close")}
             </button>
           </div>
         </Modal>
