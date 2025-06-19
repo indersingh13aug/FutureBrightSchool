@@ -18,10 +18,13 @@ export default function Navbar() {
 
   return (
     // <nav className="bg-white shadow-md sticky top-0 z-50 transition-all duration-500">
-      <nav className="bg-white shadow-md sticky top-0 z-50 h-14 transition-all duration-500">
+    // <nav className="bg-white shadow-md sticky top-0 z-50 h-14 transition-all duration-500">
 
-      <div className="max-w-7xl mx-auto px-4">
+    <nav className="bg-white shadow-md sticky top-0 z-50 h-14 transition-all duration-500">
+      <div className="max-w-7xl mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
+          {/* logo + flags */}
+
           {/* Left: Logo + Flags (horizontal) */}
           <div className="flex items-center space-x-4">
             {/* Logo */}
