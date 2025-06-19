@@ -17,15 +17,10 @@ export default function Navbar() {
   };
 
   return (
-    // <nav className="bg-white shadow-md sticky top-0 z-50 transition-all duration-500">
-    // <nav className="bg-white shadow-md sticky top-0 z-50 h-14 transition-all duration-500">
-
-    <nav className="bg-white shadow-md sticky top-0 z-50 h-14 transition-all duration-500">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 h-20 transition-all duration-500">
       <div className="max-w-7xl mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
-          {/* logo + flags */}
-
-          {/* Left: Logo + Flags (horizontal) */}
+          {/* Left: Logo + Flags */}
           <div className="flex items-center space-x-4">
             {/* Logo */}
             <Link to="/">
@@ -42,13 +37,13 @@ export default function Navbar() {
                 src="/images/en.png"
                 alt="English"
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('en')}
+                onClick={() => changeLanguage("en")}
               />
               <img
                 src="/images/hi.png"
                 alt="हिंदी"
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('hi')}
+                onClick={() => changeLanguage("hi")}
               />
             </div>
           </div>
@@ -57,25 +52,71 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Desktop Menu */}
             <ul className="hidden md:flex space-x-6 text-gray-800 font-medium items-center">
-              <li><Link to="/about" className="hover:text-blue-500">{t('nav.about')}</Link></li>
-              <li><Link to="/admissions" className="hover:text-blue-500">{t('nav.admissions')}</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-blue-500">
+                  {t("nav.about")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/admissions" className="hover:text-blue-500">
+                  {t("nav.admissions")}
+                </Link>
+              </li>
               <li
                 className="relative group"
                 onMouseEnter={() => setIsAcademicsOpen(true)}
                 onMouseLeave={() => setIsAcademicsOpen(false)}
               >
-                <span className="hover:text-blue-500 cursor-pointer">{t('nav.academics')}</span>
+                <span className="hover:text-blue-500 cursor-pointer">
+                  {t("nav.academics")}
+                </span>
                 {isAcademicsOpen && (
                   <ul className="absolute left-0 mt-0 w-64 bg-blue-700 shadow z-50">
-                    <li><Link to="/academic-programs" className="block px-4 py-2 text-white hover:bg-blue-600">{t('nav.academic_programs')}</Link></li>
-                    <li><Link to="/lower-school" className="block px-4 py-2 text-white hover:bg-blue-600">{t('nav.lower_school')}</Link></li>
-                    <li><Link to="/lower-school-25" className="block px-4 py-2 text-white hover:bg-blue-600">{t('nav.lower_school_25')}</Link></li>
-                    <li><Link to="/middle-school" className="block px-4 py-2 text-white hover:bg-blue-600">{t('nav.middle_school')}</Link></li>
+                    <li>
+                      <Link
+                        to="/academic-programs"
+                        className="block px-4 py-2 text-white hover:bg-blue-600"
+                      >
+                        {t("nav.academic_programs")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/lower-school"
+                        className="block px-4 py-2 text-white hover:bg-blue-600"
+                      >
+                        {t("nav.lower_school")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/lower-school-25"
+                        className="block px-4 py-2 text-white hover:bg-blue-600"
+                      >
+                        {t("nav.lower_school_25")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/middle-school"
+                        className="block px-4 py-2 text-white hover:bg-blue-600"
+                      >
+                        {t("nav.middle_school")}
+                      </Link>
+                    </li>
                   </ul>
                 )}
               </li>
-              <li><Link to="/studentlife" className="hover:text-blue-500">{t('nav.studentlife')}</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-500">{t('nav.contact')}</Link></li>
+              <li>
+                <Link to="/studentlife" className="hover:text-blue-500">
+                  {t("nav.studentlife")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-blue-500">
+                  {t("nav.contact")}
+                </Link>
+              </li>
             </ul>
 
             {/* Mobile Hamburger */}
@@ -88,23 +129,55 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <ul className="md:hidden flex flex-col space-y-2 mt-2 text-gray-800 font-medium pb-4">
-            <li><Link to="/about" className="block px-4 py-2 hover:bg-gray-100">{t('nav.about')}</Link></li>
-            <li><Link to="/admissions" className="block px-4 py-2 hover:bg-gray-100">{t('nav.admissions')}</Link></li>
+            <li>
+              <Link to="/about" className="block px-4 py-2 hover:bg-gray-100">
+                {t("nav.about")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/admissions" className="block px-4 py-2 hover:bg-gray-100">
+                {t("nav.admissions")}
+              </Link>
+            </li>
             <li>
               <details className="group">
                 <summary className="block px-4 py-2 cursor-pointer hover:bg-gray-100">
-                  {t('nav.academics')}
+                  {t("nav.academics")}
                 </summary>
                 <ul className="pl-6 bg-blue-50">
-                  <li><Link to="/academic-programs" className="block px-4 py-2 hover:bg-blue-100">{t('nav.academic_programs')}</Link></li>
-                  <li><Link to="/lower-school" className="block px-4 py-2 hover:bg-blue-100">{t('nav.lower_school')}</Link></li>
-                  <li><Link to="/lower-school-25" className="block px-4 py-2 hover:bg-blue-100">{t('nav.lower_school_25')}</Link></li>
-                  <li><Link to="/middle-school" className="block px-4 py-2 hover:bg-blue-100">{t('nav.middle_school')}</Link></li>
+                  <li>
+                    <Link to="/academic-programs" className="block px-4 py-2 hover:bg-blue-100">
+                      {t("nav.academic_programs")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/lower-school" className="block px-4 py-2 hover:bg-blue-100">
+                      {t("nav.lower_school")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/lower-school-25" className="block px-4 py-2 hover:bg-blue-100">
+                      {t("nav.lower_school_25")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/middle-school" className="block px-4 py-2 hover:bg-blue-100">
+                      {t("nav.middle_school")}
+                    </Link>
+                  </li>
                 </ul>
               </details>
             </li>
-            <li><Link to="/studentlife" className="block px-4 py-2 hover:bg-gray-100">{t('nav.studentlife')}</Link></li>
-            <li><Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">{t('nav.contact')}</Link></li>
+            <li>
+              <Link to="/studentlife" className="block px-4 py-2 hover:bg-gray-100">
+                {t("nav.studentlife")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">
+                {t("nav.contact")}
+              </Link>
+            </li>
 
             {/* Language Flags in Mobile Menu */}
             <div className="flex space-x-2 px-4 pt-2">
@@ -112,13 +185,13 @@ export default function Navbar() {
                 src="/images/en.png"
                 alt="English"
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('en')}
+                onClick={() => changeLanguage("en")}
               />
               <img
                 src="/images/hi.png"
                 alt="हिंदी"
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('hi')}
+                onClick={() => changeLanguage("hi")}
               />
             </div>
           </ul>
