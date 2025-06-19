@@ -20,10 +20,34 @@ export default function Navbar() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-22 py-2">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-300 hover:text-blue-800">
-            <img src="/images/4.png" alt="School Logo" className="rounded-xl w-34 h-24 object-cover" />
-          </Link>
+
+          {/* Left Section: Logo + Language Flags */}
+          <div className="flex items-center space-x-4">
+            {/* Logo */}
+            <Link to="/" className="text-2xl font-bold text-blue-300 hover:text-blue-800">
+              <img
+                src="/images/4.png"
+                alt="School Logo"
+                className="rounded-xl w-34 h-24 object-cover"
+              />
+            </Link>
+
+            {/* Language Flags */}
+            <div className="flex space-x-2">
+              <img
+                src="/images/en.png"
+                alt="English"
+                className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
+                onClick={() => changeLanguage('en')}
+              />
+              <img
+                src="/images/hi.png"
+                alt="हिंदी"
+                className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
+                onClick={() => changeLanguage('hi')}
+              />
+            </div>
+          </div>
 
           {/* Hamburger Button (for mobile) */}
           <button
@@ -33,7 +57,7 @@ export default function Navbar() {
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          {/* Desktop Menu + Language Images */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6 text-gray-800 font-medium">
             <ul className="flex space-x-6 items-center">
               <li><Link to="/about" className="hover:text-blue-500">{t('nav.about')}</Link></li>
@@ -56,22 +80,6 @@ export default function Navbar() {
               <li><Link to="/studentlife" className="hover:text-blue-500">{t('nav.studentlife')}</Link></li>
               <li><Link to="/contact" className="hover:text-blue-500">{t('nav.contact')}</Link></li>
             </ul>
-
-            {/* Language Images */}
-            <div className="flex space-x-2 ml-4">
-              <img
-                src="/images/en.png"
-                alt="English"
-                className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('en')}
-              />
-              <img
-                src="/images/hi.png"
-                alt="हिंदी"
-                className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('hi')}
-              />
-            </div>
           </div>
         </div>
 
@@ -96,7 +104,7 @@ export default function Navbar() {
             <li><Link to="/studentlife" className="block px-4 py-2 hover:bg-gray-100">{t('nav.studentlife')}</Link></li>
             <li><Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">{t('nav.contact')}</Link></li>
 
-            {/* Language Images for mobile */}
+            {/* Language Flags in Mobile */}
             <div className="flex space-x-2 px-4 pt-2">
               <img
                 src="/images/en.png"
