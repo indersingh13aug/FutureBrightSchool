@@ -19,8 +19,8 @@
     "select": "Select Language"
   },
   "about": {
-  "title": "About FutureBright School",
-  "description": "At FutureBright School, we nurture young minds to become confident, compassionate, and creative global citizens. Our mission is to provide holistic education through innovative teaching, community engagement, and a safe, inclusive environment.",
+  "title": "About Future Bright School",
+  "description": "At Future Bright School, we nurture young minds to become confident, compassionate, and creative global citizens. Our mission is to provide holistic education through innovative teaching, community engagement, and a safe, inclusive environment.",
   "core_values_title": "Our Core Values",
   "core_values": [
     "Integrity and Respect",
@@ -71,7 +71,7 @@
 },
 "academics": {
   "title": "Academic Programs",
-  "intro": "At FutureBright, our academic programs are thoughtfully designed to nurture critical thinking, creativity, and a love of learning from the earliest years through to graduation. We believe in a balanced, holistic approach to education that prepares students not just for exams, but for life.",
+  "intro": "At Future Bright, our academic programs are thoughtfully designed to nurture critical thinking, creativity, and a love of learning from the earliest years through to graduation. We believe in a balanced, holistic approach to education that prepares students not just for exams, but for life.",
   "sections": {
     "toddler": {
       "title": "Lower School (TK-1)",
@@ -99,9 +99,9 @@
   "message": "Message",
   "submit": "Send Message",
   "infoTitle": "Contact Information",
-  "address": "FutureBright School, Near Green Valley Park, Amethi, Uttar Pradesh, 227405",
+  "address": "Future Bright School, Near Green Valley Park, Amethi, Uttar Pradesh, 227405",
   "phone": "+91 98765 43210",
-  "emailText": "info@futurebrightschool.edu.in"
+  "emailText": "info@Future Brightschool.edu.in"
 },
 
   "explore_programs": "Explore Our Programs",
@@ -266,15 +266,15 @@
   },
   
   "studentLife": {
-    "heading": "Student Life at FutureBright",
-    "intro": "At FutureBright, student life is vibrant, diverse, and rich in experiences. Our campus culture nurtures a sense of belonging, encourages leadership, and fosters lifelong friendships. From academics to arts and athletics, every student has the opportunity to thrive.",
+    "heading": "Student Life at Future Bright",
+    "intro": "At Future Bright, student life is vibrant, diverse, and rich in experiences. Our campus culture nurtures a sense of belonging, encourages leadership, and fosters lifelong friendships. From academics to arts and athletics, every student has the opportunity to thrive.",
     "academics": {
       "title": "Academics Beyond the Classroom",
       "description": "Our students engage in real-world problem solving through projects, field trips, and science fairs. Enrichment programs like debate clubs, coding workshops, and math olympiads help extend learning beyond textbooks."
     },
     "arts": {
       "title": "Arts and Culture",
-      "description": "The creative spirit is alive at FutureBright! Students participate in music, dance, drama, and visual arts. Annual cultural fests, talent shows, and art exhibitions celebrate our diverse community and artistic talents."
+      "description": "The creative spirit is alive at Future Bright! Students participate in music, dance, drama, and visual arts. Annual cultural fests, talent shows, and art exhibitions celebrate our diverse community and artistic talents."
     },
     "sports": {
       "title": "Sports and Wellness",
@@ -282,7 +282,7 @@
     },
     "leadership": {
       "title": "Leadership and Student Clubs",
-      "description": "FutureBright offers student council, eco clubs, coding clubs, and more. These platforms empower students to lead initiatives, organize events, and make a difference in their school and local community."
+      "description": "Future Bright offers student council, eco clubs, coding clubs, and more. These platforms empower students to lead initiatives, organize events, and make a difference in their school and local community."
     },
     "community": {
       "title": "Community Service and Values",
@@ -290,7 +290,7 @@
     },
     "dayInLife": {
       "title": "A Day in the Life",
-      "description": "A typical day at FutureBright is full of discovery, creativity, and joy. With a supportive environment, dedicated mentors, and plenty of opportunity, student life here prepares our learners not just for exams, but for life."
+      "description": "A typical day at Future Bright is full of discovery, creativity, and joy. With a supportive environment, dedicated mentors, and plenty of opportunity, student life here prepares our learners not just for exams, but for life."
     }
   },
   "programCard": {
