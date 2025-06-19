@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, X } from "lucide-react"; // Optional: use any icons
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isAcademicsOpen, setIsAcademicsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (e) => {
-    i18n.changeLanguage(e.target.value);
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
   const toggleMobileMenu = () => {
@@ -18,14 +18,30 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative">
         <div className="flex justify-between items-center h-22 py-2">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-300 hover:text-blue-800">
-            <img src="/images/4.png" alt="School 1" className="rounded-xl w-34 h-24 object-cover" />
+            <img src="/images/4.png" alt="School Logo" className="rounded-xl w-34 h-24 object-cover" />
           </Link>
 
-          {/* Hamburger Button */}
+          {/* Language Selector */}
+          <div className="flex items-center space-x-2 absolute top-4 right-4">
+            <img
+              src="/images/en.png"
+              alt="English"
+              className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
+              onClick={() => changeLanguage('en')}
+            />
+            <img
+              src="/images/hi.png"
+              alt="हिंदी"
+              className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
+              onClick={() => changeLanguage('hi')}
+            />
+          </div>
+
+          {/* Hamburger Button (for mobile) */}
           <button
             className="md:hidden text-gray-800 focus:outline-none"
             onClick={toggleMobileMenu}
@@ -54,22 +70,12 @@ export default function Navbar() {
             </li>
             <li><Link to="/studentlife" className="hover:text-blue-500">{t('nav.studentlife')}</Link></li>
             <li><Link to="/contact" className="hover:text-blue-500">{t('nav.contact')}</Link></li>
-            <li>
-              <select
-                onChange={changeLanguage}
-                defaultValue={i18n.language}
-                className="border border-gray-300 rounded px-2 py-1 text-sm"
-              >
-                <option value="en">EN</option>
-                <option value="hi">हिंदी</option>
-              </select>
-            </li>
           </ul>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <ul className="md:hidden flex flex-col space-y-2 mt-2 text-gray-800 font-medium">
+          <ul className="md:hidden flex flex-col space-y-2 mt-2 text-gray-800 font-medium pb-4">
             <li><Link to="/about" className="block px-4 py-2 hover:bg-gray-100">{t('nav.about')}</Link></li>
             <li><Link to="/admissions" className="block px-4 py-2 hover:bg-gray-100">{t('nav.admissions')}</Link></li>
             <li>
@@ -87,16 +93,6 @@ export default function Navbar() {
             </li>
             <li><Link to="/studentlife" className="block px-4 py-2 hover:bg-gray-100">{t('nav.studentlife')}</Link></li>
             <li><Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">{t('nav.contact')}</Link></li>
-            <li className="px-4 py-2">
-              <select
-                onChange={changeLanguage}
-                defaultValue={i18n.language}
-                className="w-full border border-gray-300 rounded px-2 py-1 text-sm"
-              >
-                <option value="en">EN</option>
-                <option value="hi">हिंदी</option>
-              </select>
-            </li>
           </ul>
         )}
       </div>
