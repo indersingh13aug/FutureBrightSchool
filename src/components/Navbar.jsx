@@ -105,20 +105,7 @@ export default function Navbar() {
             <li><Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">{t('nav.contact')}</Link></li>
 
             {/* Language Flags in Mobile */}
-            <div className="flex space-x-2 px-4 pt-2">
-              <img
-                src="/images/en.png"
-                alt="English"
-                className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('en')}
-              />
-              <img
-                src="/images/hi.png"
-                alt="हिंदी"
-                className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
-                onClick={() => changeLanguage('hi')}
-              />
-            </div>
+            
           </ul>
         )}
       </div>
