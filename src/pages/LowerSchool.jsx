@@ -16,7 +16,7 @@ function ImageCarousel({ images, onImageClick }) {
   const next = () => setIndex((index + 1) % images.length);
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
+    <div   className="max-w-7xl mx-auto px-4 pt-28 pb-10">
       <img
         src={images[index]}
         alt="Slide"
@@ -46,7 +46,7 @@ function ImagePopup({ images, currentIndex, onClose }) {
   const next = () => setIndex((index + 1) % images.length);
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+    <div   className="max-w-7xl mx-auto px-4 pt-28 pb-10">
       <button className="absolute top-4 right-4 text-white text-2xl" onClick={onClose}>
         <FaTimes />
       </button>
@@ -93,7 +93,7 @@ export default function LowerSchoolTK1() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div   className="max-w-7xl mx-auto px-4 pt-28 pb-10">
       <h1 className="text-4xl font-bold text-blue-700 mb-6">
         {t("lowerSchool.title")}
       </h1>
