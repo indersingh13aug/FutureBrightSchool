@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ProgramCard from "../components/ProgramCard";
 import Modal from "../components/Modal";
+import EnquiryModal from './EnquiryModal';
+
+
 
 const programsData = [
   {
@@ -44,6 +47,7 @@ const images = [
 ];
 
 export default function HomePage() {
+  const [showEnquiry, setShowEnquiry] = useState(false);
   const { t } = useTranslation();
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [current, setCurrent] = useState(0);
@@ -190,6 +194,18 @@ export default function HomePage() {
           <p className="text-gray-700 leading-relaxed">{t("join_text")}</p>
         </motion.div>
       </section>
+
+      {/* Vertical Enquire Now Button */}
+      <button
+        onClick={() => setShowEnquiry(true)}
+        className="fixed top-1/2 left-4 font-bold text-indigo-700 transform -translate-y-1/2 -rotate-90 origin-left bg-yellow-400 text-black px-3 h-12 rounded-r shadow-lg z-50 flex items-center justify-center"
+      >
+        Enquire Now
+      </button>
+
+      {/* Enquiry Modal */}
+      <EnquiryModal isOpen={showEnquiry} onClose={() => setShowEnquiry(false)} />
+
     </main>
   );
 }
