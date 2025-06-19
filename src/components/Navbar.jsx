@@ -33,18 +33,29 @@ export default function Navbar() {
 
             {/* Language Flags */}
             <div className="flex space-x-2">
-              <img
+              {/* <img
                 src="/images/en.png"
                 alt="English"
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
                 onClick={() => changeLanguage("en")}
-              />
-              <img
+              /> */
+               <a href="#"  
+               onClick={() => changeLanguage("en")} className="hover:text-blue-500 transition">
+                            
+                         English </a>
+                // src="/images/en.png"
+                // alt="English"
+                // className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
+                // onClick={() => changeLanguage("en")}
+              // </a>
+              } &nbsp;|<a href="#"  
+               onClick={() => changeLanguage("hi")} className="hover:text-blue-500 transition">हिंदी</a>
+              {/* <img
                 src="/images/hi.png"
                 alt="हिंदी"
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
                 onClick={() => changeLanguage("hi")}
-              />
+              /> */}
             </div>
           </div>
 
