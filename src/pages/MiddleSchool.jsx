@@ -5,7 +5,7 @@ export default function MiddleSchool() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div  className="max-w-7xl mx-auto px-4 pt-28 pb-10">
       {/* Title */}
       <h1 className="text-4xl font-bold text-blue-700 mb-6">
         {t("middleSchool.title")}

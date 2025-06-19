@@ -25,7 +25,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="py-16 bg-gray-50 px-4">
+    <section className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left - Form */}
         <motion.div

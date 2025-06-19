@@ -6,7 +6,7 @@ export default function AdmissionsPage() {
   const { t } = useTranslation();
 
   return (
-    <section className="min-h-screen bg-gray-50 py-20 px-6">
+    <section className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
       <motion.div
         className="max-w-4xl mx-auto text-center mb-16"
         initial={{ opacity: 0, y: -20 }}

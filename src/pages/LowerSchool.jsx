@@ -16,7 +16,7 @@ function ImageCarousel({ images, onImageClick }) {
   const next = () => setIndex((index + 1) % images.length);
 
   return (
-    <div className="relative w-96 h-64 overflow-hidden rounded-lg shadow-lg">
+    <div className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
       <img
         src={images[index]}
         alt="Slide"

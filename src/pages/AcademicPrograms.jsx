@@ -6,7 +6,8 @@ export default function AcademicPrograms() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
+      
       {/* Page Heading */}
       <h1 className="text-4xl font-bold text-blue-700 mb-6">
         {t("academics.title")}

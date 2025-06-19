@@ -7,7 +7,7 @@ export default function AboutPage() {
   const { t } = useTranslation();
 
   return (
-    <section className="min-h-screen bg-gray-50 py-16 px-6">
+    <section className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
       {/* Hero Intro */}
       <motion.div
         className="max-w-4xl mx-auto text-center mb-16"

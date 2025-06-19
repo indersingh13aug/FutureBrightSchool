@@ -65,7 +65,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="relative min-h-screen bg-gray-100">
+    <main className="min-h-screen bg-gray-50 pt-24 pb-16 px-6">
       {/* Hero Carousel */}
       <section className="relative h-screen overflow-hidden">
         <div className="relative w-full h-[500px] overflow-hidden">
