@@ -39,17 +39,13 @@ export default function Navbar() {
                 className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
                 onClick={() => changeLanguage("en")}
               /> */
-               <a href="#"  
-               onClick={() => changeLanguage("en")} className="hover:text-blue-500 transition">
-                            
-                         English </a>
+               <button onClick={() => changeLanguage("en")} className={`hover:underline ${i18n.language === "en" ? "text-blue-600 font-semibold" : "text-gray-700"}`} >English</button>
                 // src="/images/en.png"
                 // alt="English"
                 // className="w-7 h-5 cursor-pointer border border-gray-300 rounded"
                 // onClick={() => changeLanguage("en")}
               // </a>
-              } &nbsp;|<a href="#"  
-               onClick={() => changeLanguage("hi")} className="hover:text-blue-500 transition">हिंदी</a>
+              } <button onClick={() => changeLanguage("hi")} className={`hover:underline ${i18n.language === "hi" ? "text-blue-600 font-semibold" : "text-gray-700"}`} >हिन्दी</button>
               {/* <img
                 src="/images/hi.png"
                 alt="हिंदी"
