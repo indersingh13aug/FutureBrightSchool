@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center min-h-[7rem] py-2">
+        <div className="flex justify-between items-center min-h-[1rem] py-2">
           {/* Left: Logo + Flags (horizontal) */}
           <div className="flex items-center space-x-4">
             {/* Logo */}
@@ -27,7 +27,7 @@ export default function Navbar() {
               <img
                 src="/images/4.png"
                 alt="School Logo"
-                className="w-32 h-24 object-contain rounded-xl"
+                className="w-24 h-12 object-contain rounded-xl"
               />
             </Link>
 
