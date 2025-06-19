@@ -59,8 +59,21 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} {t("footer.schoolName")}. {t("footer.rightsReserved")}
+      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400 space-y-2">
+        <div>
+          &copy; {new Date().getFullYear()} {t("footer.schoolName")}. {t("footer.rightsReserved")}
+        </div>
+        <div>
+          Developed by{" "}
+          <a
+            href="https://webcoreai.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:underline"
+          >
+            WebCore AI Solutions
+          </a>
+        </div>
       </div>
     </footer>
   );
